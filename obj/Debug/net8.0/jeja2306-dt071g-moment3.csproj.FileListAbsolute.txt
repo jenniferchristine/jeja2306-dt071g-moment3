@@ -1,0 +1,14 @@
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\bin\Debug\net8.0\jeja2306-dt071g-moment3.exe
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\bin\Debug\net8.0\jeja2306-dt071g-moment3.deps.json
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\bin\Debug\net8.0\jeja2306-dt071g-moment3.runtimeconfig.json
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\bin\Debug\net8.0\jeja2306-dt071g-moment3.dll
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\bin\Debug\net8.0\jeja2306-dt071g-moment3.pdb
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\jeja2306-dt071g-moment3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\jeja2306-dt071g-moment3.AssemblyInfoInputs.cache
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\jeja2306-dt071g-moment3.AssemblyInfo.cs
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\jeja2306-dt071g-moment3.csproj.CoreCompileInputs.cache
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\jeja2306-dt071g-moment3.dll
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\refint\jeja2306-dt071g-moment3.dll
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\jeja2306-dt071g-moment3.pdb
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\jeja2306-dt071g-moment3.genruntimeconfig.cache
+C:\Users\jenif\Desktop\dt071g\moment3\jeja2306-dt071g-moment3\obj\Debug\net8.0\ref\jeja2306-dt071g-moment3.dll
