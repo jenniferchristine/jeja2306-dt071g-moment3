@@ -11,6 +11,6 @@ Applikationen innehar ett enklare menysystem med följande val:
 
  1. Skriv i gästboken
  2. Ta bort inlägg
+ X. Avbryt/Avsluta
 <br>
-X. Avbryt/Avsluta
-<br>
+Inlägget innehåller två fält för användaren att skriva sitt namn samt text i. Detta lagras och sparas i en JSON-fil.
