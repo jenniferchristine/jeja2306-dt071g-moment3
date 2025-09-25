@@ -14,5 +14,5 @@ Applikationen innehar ett enklare menysystem med följande val:
 - X ) Avbryt/Avsluta
 
 <br>
-Inlägget innehåller två fält för användaren att skriva sitt namn samt text i. <br>
+Inlägget innehåller två fält för användaren att skriva sitt namn respektive text i. <br>
 Detta lagras som JSON och sparas i en JSON-fil.
