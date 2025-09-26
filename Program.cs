@@ -7,8 +7,8 @@ using System.Text.Json; // används för att omvandla listan till json
 
 class Guestbook
 {
-    static List<Post> postsList = new List<Post>(); // skapar lista (postsList) för att lagra inlägg (Post)
-    static string filePath = "guestbook.json"; // fil för att spara inlägg
+    static List<Post> PostsList = new List<Post>(); // skapar lista (PostsList) för att lagra inlägg (Post)
+    static string FilePath = "guestbook.json"; // fil för att spara inlägg
 
     static void Main(string[] args) // huvudmetod
     {
@@ -21,7 +21,7 @@ class Guestbook
             Console.Clear(); // rensa konsoll
 
             Console.WriteLine("\nJennifers gästbok:");
-            showPosts(); // visar alla inlägg
+            ShowPosts(); // visar alla inlägg
 
             Console.WriteLine("\n1. Skriv i gästboken");
             Console.WriteLine("2. Ta bort inlägg");
@@ -32,10 +32,10 @@ class Guestbook
             switch (choice) // alternativ beroende på val
             {
                 case "1":
-                    addPost(); // metod för att skriva i gästbok
+                    AddPost(); // metod för att skriva i gästbok
                     break;
                 case "2":
-                    deletePost(); // metod för att ta bort inlägg
+                    DeletePost(); // metod för att ta bort inlägg
                     break;
                 case "X":
                 case "x":
@@ -67,7 +67,7 @@ class Guestbook
         }
     }
 
-    static void addPost() // metod för att lägga till inlägg
+    static void AddPost() // metod för att lägga till inlägg
     {
         Console.Write("\nAnge ditt namn: ");
         string? name = Console.ReadLine();
@@ -111,30 +111,30 @@ class Guestbook
             }
         }
 
-        int index = postsList.Count + 1; // tilldelar index
-        postsList.Add(new Post(index, name!, text!));
+        int index = PostsList.Count + 1; // tilldelar index
+        PostsList.Add(new Post(index, name!, text!));
 
         Console.WriteLine("\nTack för ditt bidrag till gästboken!");
 
         SavePosts(); // spara inlägg direkt efter tillägg
     }
 
-    static void showPosts() // visar alla inlägg
+    static void ShowPosts() // visar alla inlägg
     {
-        if (postsList.Count == 0) // finns inga inlägg...
+        if (PostsList.Count == 0) // finns inga inlägg...
         {
             Console.WriteLine("[0] Inga inlägg att visa"); // ...visas meddelande
         }
         else
         {
-            foreach (var post in postsList) // ...annars loopas alla inlägg och skrivs ut
+            foreach (var post in PostsList) // ...annars loopas alla inlägg och skrivs ut
             {
                 Console.WriteLine($"[{post.Index}] {post.Name} - {post.Text}");
             }
         }
     }
 
-    static void deletePost() // raderar inlägg
+    static void DeletePost() // raderar inlägg
     {
         Console.Write("Ange index för det inlägg du vill ta bort: ");
         string? input = Console.ReadLine();
@@ -147,12 +147,12 @@ class Guestbook
 
         if (int.TryParse(input, out int index)) // index som angivits letas upp i listan...
         {
-            Post? toRemove = postsList.Find(post => post.Index == index);
+            Post? toRemove = PostsList.Find(post => post.Index == index);
             if (toRemove != null)
             {
-                postsList.Remove(toRemove); // ...och tas bort
+                PostsList.Remove(toRemove); // ...och tas bort
                 Console.WriteLine("\nInlägget har raderats!");
-                updateIndex(); // ...och uppdaterar listan
+                UpdateIndex(); // ...och uppdaterar listan
                 SavePosts(); // spara ändringar efter radering
             }
             else
@@ -166,26 +166,26 @@ class Guestbook
         }
     }
 
-    static void updateIndex() // säkerställer korrekt index efter inlägg raderats
+    static void UpdateIndex() // säkerställer korrekt index efter inlägg raderats
     {
-        for (int i = 0; i < postsList.Count; i++)
+        for (int i = 0; i < PostsList.Count; i++)
         {
-            postsList[i].Index = i + 1; // justerar index för korrekt ordning
+            PostsList[i].Index = i + 1; // justerar index för korrekt ordning
         }
     }
 
     static void SavePosts() // sparar inlägg till fil som json
     {
-        string json = JsonSerializer.Serialize(postsList);
-        File.WriteAllText(filePath, json);
+        string json = JsonSerializer.Serialize(PostsList);
+        File.WriteAllText(FilePath, json);
     }
 
     static void LoadPosts() // laddar in inlägg från json-fil
     {
-        if (File.Exists(filePath))
+        if (File.Exists(FilePath))
         {
-            string json = File.ReadAllText(filePath);
-            postsList = JsonSerializer.Deserialize<List<Post>>(json) ?? new List<Post>();
+            string json = File.ReadAllText(FilePath);
+            PostsList = JsonSerializer.Deserialize<List<Post>>(json) ?? new List<Post>();
         }
     }
 }
